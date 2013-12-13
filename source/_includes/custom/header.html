@@ -1,6 +1,23 @@
-<hgroup>
-  <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
-  {% if site.subtitle %}
-    <h2>{{ site.subtitle }}</h2>
-  {% endif %}
-</hgroup>
+
+
+<div class="social">
+                {% if site.facebook_user %}
+
+                        <a class="facebook" href="http://www.facebook.com/{{ site.facebook_user }}" title="Facebook"><img src="images/social/facebook.png"></a>
+                {% endif %}
+                {% if site.googleplus_user and site.googleplus_hidden == false %}
+                        <a class="google" href="https://plus.google.com/{{ site.googleplus_user }}" rel="author" title="Google+"><img src="images/social/googleplus.png"></a>
+                {% endif %}
+                {% if site.twitter_user %}
+                        <a class="twitter" href="http://twitter.com/{{ site.twitter_user }}" title="Twitter"><img src="images/social/twitter.png"></a>
+                {% endif %}
+                {% if site.github_user %}
+                        <a class="github" href="https://github.com/{{ site.github_user }}" title="GitHub"><img src="images/social/github.png"></a>
+                {% endif %}
+                {% if site.linkedin_user %}
+                        <a class="linkedin" href="http://www.linkedin.com/in/{{ site.linkedin_user }}" title="LinkedIn">LinkedIn</a>
+                {% endif %}
+                {% if site.subscribe_rss %}
+                        <a class="rss" href="{{ site.subscribe_rss }}" title="RSS"><img src="images/social/rss.png"></a>
+                {% endif %}
+        </div>
